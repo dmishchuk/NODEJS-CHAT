@@ -1,0 +1,93 @@
+<div class="main">
+
+    <div class="top-header col-xs-9 col-sm-9 col-md-9 col-xs-offset-2 col-sm-offset-2 col-md-offset-2">
+        <div class="row top-header-row">
+            <div class="col-md-3 col-md-offset-8">
+                <div class="btn-group user-log" dropdown is-open="status.isopen">
+                    <button type="button" class="btn btn-link dropdown-toggle" id="user-button">
+                        <span class="glyphicon glyphicon-user"></span>{{' '+username}}
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="menu" role="menu">
+                        <li>
+                            <a href="#" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-xs-2 col-md-2 col-lg-2">
+            <div class="panel panel-success online-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{'Rooms'}}</h3>
+                </div>
+                <div class="panel-body online-panel-content" ng-repeat="room in rooms">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" ng-click="selectRoom(room.name)" name="optionsRadios" id="{{room.name}}" ng-checked="{{room.checked}}">
+                            {{room.name}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="newTalkRoom" placeholder="{{newRoomInputPlaceholder}}">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="addNewTalkRoom()">+</button>
+                </span>
+            </div>
+        </div>
+
+        <div class="col-xs-8 col-sm-8 col-md-8">
+            <div class="chat-body" id="message-list">
+                {{msg}}
+                <div class="row message-row" ng-repeat="mes in messages" ng-switch="mes.type" ng-show="mes.room === selectedRoom">
+
+                    <div class="col-md-2 message-author {{(mes.current=='this')?'this-author':''}}" >
+                        <span  class="pull-right">{{mes.user}}</span>
+                    </div>
+                    <div class="message-text col-md-10" ng-switch-when="text">
+                        {{mes.message}}
+                    </div>
+                    <div class="message-image col-md-10" ng-switch-when="image" ng-show="mes.room === selectedRoom">
+                        <a href="{{mes.im}}" target="_blank">
+                            <img class="image-formatting" src="{{mes.im}}">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-2 col-sm-2 col-md-2" id="online">
+            <div class="panel panel-success online-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{'Online'}}</h3>
+                </div>
+                <div class="panel-body online-panel-content" ng-repeat="user in users">
+                    {{user}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="input-message-block">
+        <div class="row">
+            <div class="input-group col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2" id="enter-message">
+                    <span class="input-group-addon">
+                        <button class="file-input-wrapper btn  btn-lg browse">
+                            <span class="glyphicon glyphicon-upload"></span>
+                            <input type="file" class="input-file" ng-file-select="addImage($files)" accept="image/jpeg,image/png,image/gif,image/jpg">
+                        </button>
+                    </span>
+                <textarea autogrow autofocus wrap="soft" type="text" class="form-control input-message" ng-model="mes" ng-keydown="addMessageByKey($event, mes)"></textarea>
+                <span  class="input-group-addon" id="send-message" ng-click="addMessage(mes)"><span class="glyphicon glyphicon-share-alt"></span></span>
+            </div>
+        </div>
+    </div>
+
+</div>

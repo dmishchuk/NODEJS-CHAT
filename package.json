@@ -1,0 +1,30 @@
+{
+  "name": "dmishchuk",
+  "version": "0.0.1",
+  "description": "chat project",
+  "main": "server.js",
+  "dependencies": {
+    "crypto": "0.0.3",
+    "express.io": "*",
+    "cookie-parser": "1.1.0",
+    "express-session": "1.2.1",
+    "mongoose": "3.8.12",
+    "nconf": "0.6.9",
+    "passport": "0.2.0",
+    "passport-vkontakte": "0.2.1",
+    "rand-token": "0.2.1",
+    "socket.io": "1.0.4",
+    "winston": "~0.8.3",
+    "buffer": "~3.0.1",
+    "jsonfile": "~2.0.0",
+    "util": "~0.10.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "dmishchuk",
+  "license": "ISC",
+  "devDependencies": {}
+
+}

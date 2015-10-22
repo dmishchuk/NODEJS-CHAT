@@ -1,0 +1,296 @@
+@media screen and (max-width: 7680px){
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        background-image: url("../images/81.jpg");
+        background-position: center top;
+        background-repeat: no-repeat;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .main{
+        height: 100%;
+        width: 100%;
+        min-width: 300px;
+        position: absolute;
+    }
+    .chat-body{
+        min-height: 400px;
+        height: 73%;
+        width: 68%;
+        overflow-y: auto;
+        margin-left: 1%;
+        margin-bottom: 2%;
+        display: inline-block;
+        padding:5px;
+    }
+    .input-message-block{
+        margin: 30px 23px 0 23px;
+    }
+    .input-message{
+        width: 60%;
+        min-width: 520px;
+    }
+    .messagePretextBlock{
+        margin-left: 3%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        width: 15%;
+        color:white;
+        display: inline-block;
+    }
+    .page {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+    .login.page {
+        background-color: #7CA6E4;
+    }
+    .login.page .form {
+        height: 100px;
+        margin-top: -100px;
+        position: absolute;
+
+        text-align: center;
+        top: 50%;
+        width: 100%;
+    }
+    .login.page .form .usernameInput {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #fff;
+        outline: none;
+        padding-bottom: 15px;
+        text-align: center;
+        width: 400px;
+    }
+    .login.page .title {
+        font-size: 200%;
+    }
+    .login.page .usernameInput {
+        font-size: 200%;
+        letter-spacing: 3px;
+    }
+    .login.page .title, .login.page .usernameInput {
+        color: #fff;
+        font-weight: 100;
+    }
+    .unvisible{
+        display: none;
+    }
+    .thisUser{
+        color: #ed9c28;
+        font-size: 130%;
+        margin-right: 2%;
+    }
+    .thatUser{
+        color: #7CA6E4;
+        font-size: 110%;
+    }
+    #mainText{
+        color: white;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    #VK-enter{
+        font-size: 20px;
+    }
+    .vk-class{
+        margin-top: 2%;
+    }
+    #input-file{
+        margin: 1% 0 0 18%;
+        padding-left: 3px;
+    }
+    .photos{
+        display: inline-block;
+    }
+    .photos-block{
+        margin-left: 16%;
+    }
+    .hello-user{
+        font-family: Trebuchet MS;
+        color: white;
+        text-align: center;
+    }
+    .login-position{
+        font-family: Trebuchet MS;
+        padding-top: 15%;
+    }
+    .sing-in-position{
+        text-align: center;
+        color: white;
+    }
+    .vk-button{
+        margin: 0 auto;
+    }
+    .message{
+        color: black;
+    }
+    #send-file{
+        color: white;
+        display: inline-block;
+    }
+    #send-message{
+        background-color: #ed9c28;
+        cursor: pointer;
+        color: white;
+    }
+    .users{
+        float: left;
+        display: inline-block;
+        width: 15%;
+        height: 65%;
+        color: white;
+        padding-left: 3%;
+    }
+    .photo-link{
+        color: white;
+        cursor: pointer;
+    }
+    .photo-link:hover{
+        color: bisque;
+    }
+    .image-formatting{
+        background-repeat: no-repeat;
+        height: auto;
+        max-width: 40%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .browse{
+        cursor: pointer;
+    }
+    .input-file{
+        cursor: pointer;
+    }
+    .user-field{
+        background-color: white;
+    }
+    #message-list{
+        padding: 5px;
+        width: 100%;
+        overflow-x: hidden;
+        border: 1px solid white;
+        border-radius: 5px;
+        background-color: white;
+        margin: 0;
+        margin-top: 5px;
+    }
+    .panel-body{
+        padding: 0;
+        min-height: 50px;
+    }
+    .message-user{
+        color: #000000;
+        font-size: 20px;
+    }
+    .message-text{
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: 15px;
+        padding: 15px;
+        font-family: serif;
+        background-color: white;
+    }
+    .message-row{
+        margin: 0;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        border: 1px solid #d6e9c6;
+        display: flex;
+    }
+    .message-author{
+        background-color: rgb(203, 226, 255);
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        font-size: 18px;
+        padding: 13px;
+        font-family: serif;
+        font-weight: bold;
+        margin-left: -2px;
+    }
+    .message-image{
+        min-width: auto;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        padding: 15px;
+        background-color: white;
+    }
+    .user-log{
+        display: block;
+        margin-right: 3px;
+    }
+    .top-header-row{
+        height: 50px;
+        margin: 5px 10px 5px 12px;
+        border-radius: 5px;
+    }
+    .this-author{
+        background-color: #d6e9c6;
+    }
+    #user-button{
+        margin: 0 auto;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        border: 1px solid;
+        border-radius: 5px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    #menu{
+        margin-top: 42px;
+        width: 100%;
+    }
+    .online-panel-content{
+        min-height: 30px;
+        padding: 4px;
+        padding-left: 15px;
+    }
+    .online-panel{
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+    .added-user-panel {
+        padding: 7px;
+        background-color: #C1EC9F;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .top-header{
+        padding: 0;
+        padding-right: 8%;
+    }
+    #enter-message{
+        margin: 0 10%;
+        width: 80%;
+    }
+    .input-message{
+        min-width: 220px;
+    }
+    .message-author{
+        min-width: 150px;
+        font-size: 15px;
+        padding-top: 15px;
+    }
+    #online{
+        width: 62%;
+        margin: 0 19%;
+        display: block;
+    }
+    #message-list{
+        height: 60%;
+    }
+}
+

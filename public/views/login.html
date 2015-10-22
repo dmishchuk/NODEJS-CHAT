@@ -1,0 +1,20 @@
+<div class="container login-position">
+    <div class="row">
+        <form class="form-signin col-xs-6 col-sm-6 col-md-6 col-xs-offset-3 col-sm-offset-3 col-md-offset-3" id="sign-in-block" role="form">
+            <h2 class="form-signin-heading sing-in-position">Please sign in</h2>
+            <br>
+            <input type="text" class="form-control" placeholder="{{placeholder}}" ng-model="data.login">
+            <br>
+            <input type="password" class="form-control" placeholder="{{passPlaceholder}}" ng-model="data.pass">
+            <br>
+            <button class="btn btn-lg btn-warning btn-block" ng-click="addLogin(data.login)" type="submit">Sign in</button>
+            <br>
+            <div ng-show="created" class="well added-user-panel">
+                <span>User {{addedUser}} added, please Sign in</span>
+            </div>
+            <div class="row">
+                <a id="VK-enter" class="btn btn-vk btn-lg col-xs-6 col-sm-6 col-md-6 col-xs-offset-3 col-sm-offset-3 col-md-offset-3" href="/auth/vk/callback" role="button" ng-click="addVkLogin($event)"><i class="fa fa-vk"></i> <i ng-show="loading === true" class="fa fa-spinner fa-spin"></i></a>
+            </div>
+        </form>
+    </div>
+</div>
